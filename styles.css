@@ -1,104 +1,133 @@
-#last{ 
-	width: 100%; 
-	height: auto; 
-	justify-content: center; 
-	background-color: #ffb3b3; 
-	} 
-	.full{ 
-	width: 80%; 
-	display: inline-block; 
-	margin:2%; 
-	margin-left: 10%; 
-	text-align: center; 
-	background-color: black; 
-	color: white; 
-	border:15px solid orange; 
-	border-radius: 5px; 
-	margin-bottom: 8%; 
-	margin-top: 8%; 
-	} 
-	.full h3{ 
-	font-size: 2rem; 
-	display:block; 
-	margin: 2%; 
-	margin-bottom: 0; 
-	} 
-	.lt{ 
-	padding: 2%; 
-	margin: 2%; 
-	} 
-	.rt{ 
-	padding: 2%; 
-	margin: 2%; 
-	} 
-	.lt textarea{ 
-	width: 94%; 
-	margin-left: 2.8%; 
-	} 
-	button{ 
-	margin: 2%; 
-	} 
-	.btn-primary{ 
-	background-color: black; 
-	border: 2px solid white; 
-	border-radius: 5%; 
-	} 
-	.list-item{ 
-	margin-bottom: 2%; 
-	list-style-type: none; 
-	} 
-	.list-item span{ 
-	margin-left: 10px; 
-	font-size: 1.4rem; 
-	} 
-	.list-item a{ 
-	color: white; 
-	display: inline-block; 
-	} 
-	.list-item a:hover{ 
-	text-decoration: underline; 
-	} 
-	.form-control{ 
-	background-color: black; 
-	} 
-		
-	@media screen and (min-width: 770px){ 
-	.full{ 
-		width: 70%; 
-		margin-left: 15%; 
-	} 
-	.lt textarea{ 
-	width: 95%; 
-	margin-left: 2.4%; 
-	} 
-	} 
-		
-	@media screen and (min-width: 1100px){ 
-	.full{ 
-		width: 65%; 
-		margin-left: 17%; 
-		margin-top: 5%; 
-	} 
-	.lt{ 
-		width: 55%; 
-		display: inline-block; 
-		float: left; 
-		margin-right: 0; 
-	} 
-	.rt{ 
-		width: 35%; 
-		display: inline-block; 
-		margin-left: 0; 
-	} 
-	.list-item{ 
-	margin-bottom: 10%; 
-	} 
-	.contact-list{ 
-		margin-top: 22%; 
-		padding-right: 8%; 
-	} 
-	.fa-envelope, .gmail{ 
-		display: inline-block; 
-		width: auto; 
-	} 
-	}
+/* style.css */
+
+/* General styling for the form section */
+#last {
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.full {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.lt, .rt {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Form styling */
+.form-horizontal {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-horizontal .form-group {
+    margin-bottom: 15px;
+}
+
+.form-horizontal .form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.form-horizontal .send-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form-horizontal .send-button:hover {
+    background-color: #0056b3;
+}
+
+.form-horizontal .send-text {
+    margin-left: 5px;
+}
+
+.alert {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Contact information styling */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-list .fa {
+    margin-right: 10px;
+}
+
+.contact-list .contact-text {
+    font-size: 16px;
+}
+
+.contact-list .place, .contact-list .gmail, .contact-list .phone {
+    color: #555;
+}
+
+.contact-list .gmail a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-list .gmail a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .full {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lt, .rt {
+        margin: 10px 0;
+    }
+}
